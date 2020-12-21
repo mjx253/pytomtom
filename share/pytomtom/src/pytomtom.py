@@ -9,22 +9,22 @@
 
 #----------------------------------------------- DEVELOPPEMENT RULES DEFINITION --------------------------------------
 ## developpement rules
-##   - Utilisation de la langue anglaise pour le nom des variables et des fonctions (pas de melange)
-##   - Les noms des fonctions commencent par une majuscule, avec une majuscule a chaque nouveau mot
-##   ( - les noms de fonctions commencent par une majuscule avec _ pour separer les mots )
-##   - Les variables commencent par une minuscule, avec une majuscule a chaque nouveau mot
-##   ( - pas de distinction entre le nom d'une variable et le nom d'une fonction )
-##   - Les fonctions ont toujours une entete definissant l'utilite de la fonction, ...
-##   - Le nom d'une classe s'ecrit comme le nom d'une fonction
-##   - tous les textes s'utilisent avec la fonction _() afin de rendre l'application internationnale
-##   - tout code ecrit deux fois est mis dans une fonction, jamais copie
-##   - tous les commentaires ne sont pas ecrits avec des accents (internationalisation de l'application)
-##   - pas d'espace avant (, mais un espace apres
-##   - un espace avant ), mais pas d'espace apres
-##   - pas d'espace avant : qui demarre un ensemble
-##   - un espace avant et un apres + (concatenation de chaine)
-##   - un espace apres une virgule
-##   - les fonctions internes commencent par _
+##   - Use of the English Language for the names of variables and functions (no mixing)
+##   - Function names start with a capital letter, with a capital letter for each new word
+## (- function names start with a capital letter with _ to separate words)
+## - Variables start with a lowercase, with an uppercase for each new word
+## (- no distinction between the name of a variable and the name of a function)
+## - Functions always have a header defining the utility of the function, ...
+## - The name of a class is written like the name of a function
+## - all texts are used with the _ () function in order to make the application international
+## - any code written twice is put in a function, never copied
+## - not all comments are written with accents (application internationalization)
+## - no space before (, but a space after
+## - a space before), but no space after
+## - no space before: which starts a set
+## - a space before and after + (string concatenation)
+## - a space after a comma
+## - internal functions start with _
 
 #---------------------------------------------------- LIBRARIES IMPORT ---------------------------------------------------------
 ## used to be compatible python 2.5 (with)
@@ -71,13 +71,13 @@ gettext.bindtextdomain('pytomtom', '../share/locale')
 gettext.textdomain('pytomtom')
 _ = gettext.gettext
 
-## TODO : en mode texte non lance par un terminal, un message d'erreur arrive, il n'empeche pas le lancement
-##        du logiciel ni ses actions, mais il serait plus propre de ne pas l'avoir
+## TODO : in text mode not launched by a terminal, an error message arrives, it does not prevent the launch
+## of the software or its actions, but it would be cleaner not to have it
 
 #----------------------------------------------- VERIFICATIONS DES PRE-REQUIS ------------------------------------------------
 ## Verify to running Linux - posix system
 if( os.name != "posix" ):
-	print "You are not runnig Linux operating system"
+	print "You are not running Linux operating system"
 	sys.exit( 2 )
 ## TODO : needed ? Verify python  >=2.0
 ##pygtk.require('2.0')
